@@ -14,6 +14,22 @@ $ios_link = $settings_instance->setting('ios_link');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="<?=$_SESSION['webpath']; ?>/" target="_self">
+<!-- PWA Meta Tags -->
+<meta name="theme-color" content="#02A39F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="KiraPay">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="Nigeria's Top Bill Payment platform: Unlimited Possibilities, One Click">
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Apple Touch Icons -->
+<link rel="apple-touch-icon" href="img/LogoIcon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/LogoIcon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/LogoIcon.png">
+<link rel="apple-touch-icon" sizes="167x167" href="img/LogoIcon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -409,12 +425,90 @@ $ios_link = $settings_instance->setting('ios_link');
         <p><span style="font-weight: bold;">Privacy Policy | Terms & Conditions</span></p>
       </div>
     </footer>
+
+<!-- PWA Install Button -->
+<button id="pwaInstallBtn" class="pwa-install-button">
+  <i class="fa-solid fa-download"></i>
+  <span>Install App</span>
+</button>
+
       <script src="index.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="main.js"></script>
+<!-- PWA Registration & Install Script -->
+<script>
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered successfully:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+    });
+  }
+
+  // PWA Install Prompt Handler
+  let deferredPrompt;
+  const installBtn = document.getElementById('pwaInstallBtn');
+
+  // Listen for beforeinstallprompt event
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing
+    e.preventDefault();
+    // Save the event for later use
+    deferredPrompt = e;
+    // Show the install button
+    if (installBtn) {
+      installBtn.style.display = 'flex';
+    }
+    console.log('PWA install prompt is available');
+  });
+
+  // Handle install button click
+  if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+      if (!deferredPrompt) {
+        console.log('Install prompt not available');
+        return;
+      }
+      
+      // Show the install prompt
+      deferredPrompt.prompt();
+      
+      // Wait for the user's response
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response to install prompt: ${outcome}`);
+      
+      // Clear the deferredPrompt
+      deferredPrompt = null;
+      
+      // Hide the install button
+      installBtn.style.display = 'none';
+    });
+  }
+
+  // Track when PWA is installed
+  window.addEventListener('appinstalled', () => {
+    console.log('PWA was installed successfully');
+    deferredPrompt = null;
+    if (installBtn) {
+      installBtn.style.display = 'none';
+    }
+  });
+
+  // Check if already running in standalone mode
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    console.log('App is already running in standalone mode');
+    if (installBtn) {
+      installBtn.style.display = 'none';
+    }
+  }
+</script>
     </body>
-</body>
 </html>

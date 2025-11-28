@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-:root
-{
-    --primaryColor: #02A39F;
-    --bgPrmaryColor: #FFFFFD;
-    --brand :#2644F2;
-    --secondaryColor:#6c7cb3;  
-    --darkColor: #333; 
-    --white: #fff;
-    --black: #0F0114;
-    --ash: #828282;
-    
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primaryColor: #02a39f;
+  --bgPrmaryColor: #fffffd;
+  --brand: #2644f2;
+  --secondaryColor: #6c7cb3;
+  --darkColor: #333;
+  --white: #fff;
+  --black: #0f0114;
+  --ash: #828282;
 }
 *,
 *::before,
@@ -19,10 +17,13 @@
   box-sizing: border-box;
 }
 
-h1, p, span, a{
-  color: #1D1D1D;
+h1,
+p,
+span,
+a {
+  color: #1d1d1d;
 }
-.d-flex{
+.d-flex {
   align-items: center;
 }
 ul {
@@ -38,17 +39,16 @@ html {
 body {
   background-color: var(--bgPrmaryColor);
   color: var(--darkColor);
-  font-family:"Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   padding: 0;
   margin: 0;
 }
 
-.container{
+.container {
   padding-left: 5rem;
   padding-right: 5rem;
 }
-
 
 header {
   padding: 0rem 6rem 8rem 6rem;
@@ -61,20 +61,19 @@ footer {
   padding: 2rem 6rem;
 }
 
-
 /* Header */
 header {
   position: relative;
   width: 100%;
-  background-image: url('img/bgImage.png');
+  background-image: url("img/bgImage.png");
   background-repeat: no-repeat;
-  background-position: center ;
+  background-position: center;
   background-size: cover;
   min-height: 90vh;
   /* z-index: -1; */
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,22 +81,23 @@ nav{
   padding-bottom: 1rem;
 }
 
-.openMenu, .menu-list{
+.openMenu,
+.menu-list {
   display: none;
 }
 
-.nav-list{
+.nav-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
 }
 
-.nav-list li{
+.nav-list li {
   list-style: none;
 }
 
-.nav-list li a{
+.nav-list li a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
@@ -107,8 +107,8 @@ nav{
   color: black;
 }
 
-.nav-cta a{
-  background-color: #E9ECEF;
+.nav-cta a {
+  background-color: #e9ecef;
   border-radius: 40px;
   padding: 1.5rem 3rem;
   width: 120px;
@@ -118,7 +118,7 @@ nav{
 }
 
 /* hero */
-.hero{
+.hero {
   width: 100%;
   height: 100%;
   display: flex;
@@ -126,10 +126,11 @@ nav{
   align-items: center;
 }
 
-.hero-text, .hero-tabs_container {
+.hero-text,
+.hero-tabs_container {
   width: 50%;
 }
-.hero-tabs_container img{
+.hero-tabs_container img {
   width: 100%;
 }
 .hero-text {
@@ -139,27 +140,25 @@ nav{
   gap: 30px;
 }
 
-.hero-text h1{
+.hero-text h1 {
   font-size: 48px;
   font-weight: 400;
   line-height: 46px;
   letter-spacing: -1.3300000429153442px;
   text-align: left;
-
 }
-.hero-text p{
+.hero-text p {
   font-size: 36px;
   font-weight: 500;
   line-height: 46px;
   letter-spacing: -1.3300000429153442px;
   text-align: left;
-  
 }
-.hero-text span{
+.hero-text span {
   font-weight: 700;
 }
-.hero-btn{
-  background: #2644F2;
+.hero-btn {
+  background: #2644f2;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -167,11 +166,11 @@ nav{
   padding: 1rem 3rem;
   border-radius: 24px;
   border: none;
-  box-shadow: 0px 18.26px 21.62px -15.91px #F16521;
+  box-shadow: 0px 18.26px 21.62px -15.91px #f16521;
   align-self: center;
 }
-.enjoy-btn{
-  background:white;
+.enjoy-btn {
+  background: white;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -181,45 +180,42 @@ nav{
   border: none;
 }
 
-
 /* Enjoy section */
-#enjoy{
+#enjoy {
   position: relative;
   width: 100%;
-  background-image: url('img/enjoyBG.png');
+  background-image: url("img/enjoyBG.png");
   background-repeat: no-repeat;
-  background-position: center ;
+  background-position: center;
   background-size: cover;
   min-height: 60vh;
   display: flex;
 }
-.enjoy-img-container, .enjoy-desc{
+.enjoy-img-container,
+.enjoy-desc {
   width: 50%;
   height: 100%;
 }
-.enjoy-img-container img{
+.enjoy-img-container img {
   height: 400px;
 }
-.enjoy-desc h1{
+.enjoy-desc h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: 60px;
   letter-spacing: -1.440000057220459px;
   text-align: left;
   color: #fff;
-
 }
-.enjoy-desc p{
+.enjoy-desc p {
   font-size: 14px;
   font-weight: 400;
   line-height: 35px;
   letter-spacing: -0.4000000059604645px;
   text-align: left;
-  
+
   color: #fff;
-
 }
-
 
 /* OUR PARTNERS.............*/
 
@@ -231,7 +227,8 @@ nav{
   margin-bottom: 3rem;
 }
 
-.slider, .slider2 {
+.slider,
+.slider2 {
   height: 100px;
   margin: auto;
   overflow: hidden;
@@ -239,7 +236,7 @@ nav{
   width: auto;
 }
 
-.slider .slider-track{
+.slider .slider-track {
   animation: scroll 30s linear infinite;
   display: flex;
   justify-content: space-between;
@@ -254,12 +251,14 @@ nav{
   width: fit-content;
 }
 
-.slider .slide, .slider2 .slide {
+.slider .slide,
+.slider2 .slide {
   height: 100px;
   /* width: 250px; */
 }
 
-.slider .slider-track:hover, .slider2 .slider-track:hover {
+.slider .slider-track:hover,
+.slider2 .slider-track:hover {
   animation-play-state: paused;
 }
 
@@ -289,19 +288,19 @@ nav{
 }
 
 /* download section */
-#download{
+#download {
   position: relative;
   width: 100%;
-  background-image: url('img/downloadBg.png');
+  background-image: url("img/downloadBg.png");
   background-repeat: no-repeat;
-  background-position: center ;
+  background-position: center;
   background-size: cover;
   min-height: 60vh;
   display: flex;
   flex-direction: row-reverse;
 }
 
-.download-vector{
+.download-vector {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -309,130 +308,122 @@ nav{
   left: 0;
 }
 
-.download-img-container, .download-desc{
+.download-img-container,
+.download-desc {
   width: 50%;
   height: 100%;
 }
-.download-img-container{
+.download-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.download-img-container img{
+.download-img-container img {
   height: 300px;
 }
-.download-desc h1{
+.download-desc h1 {
   font-size: 28px;
   font-weight: 700;
   line-height: 60px;
   letter-spacing: -1.440000057220459px;
   text-align: left;
   color: #fff;
-
 }
-.download-desc p{
+.download-desc p {
   font-size: 14px;
   font-weight: 400;
   line-height: 35px;
   letter-spacing: -0.4000000059604645px;
   text-align: left;
-  
-  color: #fff;
 
+  color: #fff;
 }
 
 /* testimonial */
-#testimonial h1{
+#testimonial h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: 38.4px;
   text-align: center;
-  color: #02A39F;
+  color: #02a39f;
 }
-#testimonial p{
+#testimonial p {
   font-size: 24px;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.5820000171661377px;
   text-align: center;
   color: #525256;
-  
 }
 
-.test-tab-container{
+.test-tab-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin-top: 4rem;
 }
 
-
-.test-tab{
-  padding: 12px 36.38px ;
+.test-tab {
+  padding: 12px 36.38px;
   gap: 0px;
-  border-radius: 12.8px ;
+  border-radius: 12.8px;
   opacity: 0px;
   background: #f9f9f9;
-  box-shadow: 9.12px 18.23px 24.31px 0px #ECEEF1;
-  box-shadow: -9.12px -18.23px 24.31px 0px #FFFFFF;
+  box-shadow: 9.12px 18.23px 24.31px 0px #eceef1;
+  box-shadow: -9.12px -18.23px 24.31px 0px #ffffff;
 }
-.test-tab h3{
+.test-tab h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 18px;
   text-align: center;
 }
-.test-tab p{
+.test-tab p {
   font-size: 13px !important;
   font-weight: 400 !important;
   line-height: 14px !important;
   text-align: center;
   margin-top: 10px;
-
 }
 
-
 /* refer */
-#refer{
+#refer {
   position: relative;
-  background: #F4F4F5;
+  background: #f4f4f5;
   width: 100%;
   /* min-height: 60vh; */
   display: flex;
   align-items: center;
   padding-bottom: 0 !important;
 }
-.refer-img-container, .refer-desc{
+.refer-img-container,
+.refer-desc {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: end;
 }
-.refer-desc{
+.refer-desc {
   align-items: start;
   flex-direction: column;
 }
-.refer-img-container img{
+.refer-img-container img {
   width: 100%;
 }
 
-.refer-desc p{
+.refer-desc p {
   font-size: 40px;
   font-weight: 500;
-  line-height:46px;
+  line-height: 46px;
   letter-spacing: -1.3300000429153442px;
-  text-align: left;  
+  text-align: left;
 }
-.refer-desc span{
+.refer-desc span {
   font-weight: 700;
-  
 }
 
-
-
-
-#faq{
+#faq {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -448,17 +439,16 @@ nav{
 
 h2.faq-container-h2 {
   margin-bottom: 4rem;
- text-align: center;
+  text-align: center;
 }
 
 .faq-container h2 {
   /* padding-bottom: 2rem; */
- 
 }
 
 .accordion-button {
   font-size: 1.8rem !important;
-  font-family: 'Jost' !important;
+  font-family: "Jost" !important;
   font-weight: 600 !important;
   color: var(--darkColor) !important;
   /* border: 1px solid #fff; */
@@ -468,11 +458,10 @@ h2.faq-container-h2 {
 
 .accordion-item {
   margin-bottom: 2rem;
- 
 }
 .accordion-body {
   font-size: 1.7rem !important;
-  font-family: 'Jost' !important;
+  font-family: "Jost" !important;
   line-height: 3.2rem !important;
   color: var(--primaryColor) !important;
   font-weight: normal;
@@ -481,7 +470,6 @@ h2.faq-container-h2 {
   /* border-radius: 80px; */
   padding: 12px, 336.3px, 12px, 16px;
   margin-bottom: 2rem;
- 
 }
 
 .faq-review {
@@ -493,42 +481,124 @@ h2.faq-container-h2 {
   text-align: center;
 }
 
-
-.footer-box{
+.footer-box {
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
 
-.footer-about{
+.footer-about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.footer-about ul{
+.footer-about ul {
   display: flex;
   gap: 5px;
 }
 
-footer ul li{
+footer ul li {
   list-style: none;
 }
 
-.copy{
+.copy {
   margin-top: 2rem;
 }
 
-.copy p{
+.copy p {
   text-align: center;
   font-size: 14px;
 }
 
-footer h3{
-
+footer h3 {
 }
 
 footer li {
   font-size: small;
+}
+
+/* PWA Install Button */
+.pwa-install-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.4rem 2.5rem;
+  background: linear-gradient(135deg, #02a39f 0%, #0f5a5f 100%);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(2, 163, 159, 0.5);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  animation: pulseKirapay 2s infinite;
+  letter-spacing: 0.03rem;
+}
+
+.pwa-install-button i {
+  font-size: 1.8rem;
+}
+
+.pwa-install-button:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 18px 50px rgba(2, 163, 159, 0.7);
+  background: linear-gradient(135deg, #0f5a5f 0%, #02a39f 100%);
+  border-color: #e0ffff;
+}
+
+.pwa-install-button:active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(2, 163, 159, 0.6);
+}
+
+@keyframes pulseKirapay {
+  0%,
+  100% {
+    box-shadow: 0 12px 35px rgba(2, 163, 159, 0.5);
+  }
+  50% {
+    box-shadow: 0 12px 45px rgba(2, 163, 159, 0.8);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .pwa-install-button {
+    bottom: 25px;
+    right: 25px;
+    padding: 1.2rem 2.2rem;
+    font-size: 1.5rem;
+  }
+
+  .pwa-install-button i {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pwa-install-button {
+    bottom: 20px;
+    right: 20px;
+    width: 62px;
+    height: 62px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .pwa-install-button span {
+    display: none;
+  }
+
+  .pwa-install-button i {
+    font-size: 2rem;
+  }
 }

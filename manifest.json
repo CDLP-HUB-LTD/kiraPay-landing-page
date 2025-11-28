@@ -1,0 +1,32 @@
+{
+  "name": "KiraPay - Budget-Friendly Data & Bills Payment",
+  "short_name": "KiraPay",
+  "description": "Nigeria's Top Bill Payment platform: Unlimited Possibilities, One Click. Buy Data, Airtime, Cable TV, and Bills Payment 24/7.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFD",
+  "theme_color": "#02A39F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/LogoIcon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/LogoIcon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "utilities", "business"],
+  "screenshots": [
+    {
+      "src": "img/service.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}
